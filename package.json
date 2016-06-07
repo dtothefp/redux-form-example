@@ -1,0 +1,52 @@
+{
+  "name": "performance-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp build",
+    "deploy": "./deploy.sh; gulp deploy",
+    "test": "babel-node ./scripts/deploy-test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.3.17",
+    "babel-plugin-add-module-exports": "^0.1.1",
+    "babel-plugin-transform-decorators-legacy": "^1.2.0",
+    "babel-plugin-typecheck": "^3.5.1",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
+    "babel-register": "^6.3.13",
+    "boiler-addon-assemble-middleware": "^1.0.1",
+    "boiler-addon-assemble-nunjucks": "^1.1.16",
+    "boiler-addon-webpack-babel": "^3.0.0",
+    "boiler-addon-webpack-loaders-base": "^3.0.0",
+    "boiler-addon-webpack-styles": "^3.0.0",
+    "boiler-config-webpack": "^3.0.0",
+    "boiler-core": "^3.0.0",
+    "boiler-preset-base": "^3.0.0",
+    "boiler-utils": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-gh-pages": "^0.5.4",
+    "lodash": "^4.0.0",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-devtools": "^3.3.1",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.0.11",
+    "redux-form": "^5.2.5",
+    "superagent": "^2.0.0",
+    "superagent-promise": "^1.1.0",
+    "webpack": "^1.12.14"
+  },
+  "devDependencies": {
+    "js-cookie": "^2.1.2",
+    "query-string": "^4.2.0"
+  }
+}

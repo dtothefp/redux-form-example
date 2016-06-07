@@ -1,0 +1,3 @@
+{% macro iso(environment, props, selector, name, wrapper) %}
+  <div {{selector}}>{% if not environment.isDev %}{% get_snippet name=name, props=props, wrapper=wrapper %}{% endif %}</div>
+{% endmacro %}
