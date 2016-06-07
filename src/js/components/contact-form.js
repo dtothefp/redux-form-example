@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {reduxForm} from 'redux-form';
+import {Field, reduxForm} from 'redux-form';
 
 class ContactForm extends Component {
   static propTypes = {
@@ -8,25 +8,25 @@ class ContactForm extends Component {
   }
 
   handleSubmit(e) {
-    debugger;
+    //do stuff here
   }
 
   render() {
-    const {fields: {firstName, lastName, email}, handleSubmit} = this.props;
+    const {handleSubmit} = this.props;
 
     return (
       <form onSubmit={handleSubmit(this.handleSubmit)}>
         <div>
           <label>First Name</label>
-          <input type="text" placeholder="First Name" {...firstName}/>
+          <Field name="firstName" component={React.DOM.input} type="text"/>
         </div>
         <div>
           <label>Last Name</label>
-          <input type="text" placeholder="Last Name" {...lastName}/>
+          <Field name="lastName" component={React.DOM.input} type="text"/>
         </div>
         <div>
           <label>Email</label>
-          <input type="email" placeholder="Email" {...email}/>
+          <Field name="email" component={React.DOM.input} type="email"/>
         </div>
         <button type="submit">Submit</button>
       </form>
@@ -36,7 +36,6 @@ class ContactForm extends Component {
 
 // Decorate the form component
 export default reduxForm({
-  form: 'contact', // a unique name for this form
-  fields: ['firstName', 'lastName', 'email']
+  form: 'contact' // a unique name for this form
 })(ContactForm);
 
